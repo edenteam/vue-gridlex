@@ -1,0 +1,17 @@
+$gl-mq-list := {
+  xl: "screen and (min-width: " + $xl-min + ")"  // min 1367px
+  lg: "screen and (max-width: " + $lg-max + ")"  // max 1366px
+  md: "screen and (max-width: " + $md-max + ")"  // max 1359px
+  sm: "screen and (max-width: " + $sm-max + ")"  // max 1023px
+  ms: "screen and (max-width: " + $ms-max + ")"  // max 767px
+  xs: "screen and (max-width: " + $xs-max + ")", // up to 479px
+};
+
+$gl-mq-clear-list := {
+  xl: "screen and (min-width: " + $xl-min + ")"  // min 1367px
+  lg: "screen and (min-width: " + $lg-min + ") and (max-width: " + $lg-max + ")"  // 1360px > 1366px
+  md: "screen and (min-width: " + $md-min + ") and (max-width: " + $md-max + ")"  // 1024px > 1359px
+  sm: "screen and (min-width: " + $sm-min + ") and (max-width: " + $sm-max + ")"  // 768px > 1023px
+  ms: "screen and (min-width: " + $ms-min + ") and (max-width: " + $ms-max + ")"  // 480px > 767px
+  xs: "screen and (max-width: " + $xs-max + ")", // up to 479px
+};

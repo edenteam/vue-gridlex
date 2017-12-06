@@ -1,3 +1,3 @@
-const text = 'grilex';
+const text = 'gridlex';
 
 export default text;

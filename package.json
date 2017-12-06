@@ -4,7 +4,10 @@
   "description": "Gridlex for Vue.js",
   "main": "./dist/vue-gridlex.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "styl-dev": "stylus -w ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
+    "styl-build": "stylus ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
+    "dev": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
   },
   "homepage": "https://github.com/edenteam/vue-gridlex#readme",
   "devDependencies": {
+    "stylus": "^0.54.5",
     "webpack": "^3.10.0"
   }
 }

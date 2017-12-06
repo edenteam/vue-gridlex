@@ -69,7 +69,7 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-const text = 'grilex';
+const text = 'gridlex';
 
 /* harmony default export */ __webpack_exports__["default"] = (text);
 

@@ -2,7 +2,7 @@
   "name": "vue-gridlex",
   "version": "0.0.1",
   "description": "Gridlex for Vue.js",
-  "main": "index.js",
+  "main": "./dist/vue-gridlex.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/edenteam/vue-gridlex/issues"
   },
-  "homepage": "https://github.com/edenteam/vue-gridlex#readme"
+  "homepage": "https://github.com/edenteam/vue-gridlex#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }

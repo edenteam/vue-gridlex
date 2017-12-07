@@ -1,30 +1,60 @@
 {
-  "name": "vue-gridlex",
-  "version": "0.0.2",
+  "_from": "vue-gridlex@latest",
+  "_id": "vue-gridlex@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-FL+bBucDWC7jhwDayojUKiygrLfF6KOGFb9unPgGJPawcwk8EhosMUa885rAmObsgP2Ue0ZVHx3u9Dpenjdd6g==",
+  "_location": "/vue-gridlex",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "vue-gridlex@latest",
+    "name": "vue-gridlex",
+    "escapedName": "vue-gridlex",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/vue-gridlex/-/vue-gridlex-0.0.2.tgz",
+  "_shasum": "9f7ba91123ba471bf482f4962204c242a5d8a7a6",
+  "_spec": "vue-gridlex@latest",
+  "_where": "D:\\WEB\\node\\gyd",
+  "author": {
+    "name": "EdenTeam",
+    "email": "edentechteam@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/edenteam/vue-gridlex/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Gridlex for Vue.js",
-  "main": "./dist/vue-gridlex.js",
-  "scripts": {
-    "styl-dev": "stylus -w ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
-    "styl-build": "stylus ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
-    "dev": "webpack --watch",
-    "build": "webpack"
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "stylus": "^0.54.5",
+    "webpack": "^3.10.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edenteam/vue-gridlex.git"
-  },
+  "homepage": "https://github.com/edenteam/vue-gridlex#readme",
   "keywords": [
     "vue",
     "gridlex"
   ],
-  "author": "EdenTeam <edentechteam@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/edenteam/vue-gridlex/issues"
+  "main": "./src/index.js",
+  "name": "vue-gridlex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edenteam/vue-gridlex.git"
   },
-  "homepage": "https://github.com/edenteam/vue-gridlex#readme",
-  "devDependencies": {
-    "stylus": "^0.54.5",
-    "webpack": "^3.10.0"
-  }
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack --watch",
+    "styl-build": "stylus ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
+    "styl-dev": "stylus -w ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css"
+  },
+  "version": "0.0.2"
 }

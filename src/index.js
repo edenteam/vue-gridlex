@@ -1,7 +1,12 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.VueGridlex = factory());
+	if (typeof exports === 'object' && typeof module !== 'undefined') {
+    module.exports = factory();
+    module.exports.default = module.exports;
+	} else if(typeof define === 'function' && define.amd) {
+    define(factory)
+  } else {
+    global.VueGridlex = factory()
+  }
 }(this, (function () { 'use strict';
 
 /*  */
@@ -14,6 +19,65 @@ const camelCase = function (name) {
     return offset ? letter.toUpperCase() : letter;
   }).replace(MOZ_HACK_REGEXP, 'Moz$1');
 };
+
+const Grid = {
+  functional: true,
+
+  render: (h, { data, children }) => {
+    let completeClass = 'l-grid';
+
+    if (data.attrs && typeof data.attrs !== 'undefined') {
+      if (data.attrs.size && data.attrs.size !== 'undefined') {
+        completeClass += `-g${data.attrs.size}`;
+      }
+
+      for (let key in data.attrs) {
+        let val = data.attrs[key];
+
+        if (key === 'size') {
+          continue;
+        }
+
+        if (!val) {
+          completeClass += '-' + camelCase(key);
+          continue;
+        }
+
+        if (key.match(/(xs|ms|sm|md|lg|xl)/)) {
+          completeClass += `_${key}-${val}`;
+        }
+      }
+
+      // let attrKeys = Object.keys(data.attrs);
+
+      // let sizeAttrIdx = attrKeys.findIndex((key) => {
+      //   return key.match(/^size-[0-9]{1,2}/);
+      // });
+
+      // if (sizeAttrIdx > -1) {
+      //   let sizeAttr = attrKeys[sizeAttrIdx];
+      //   let size = sizeAttr.replace('size-', '');
+      //   completeClass += `-${size}`;
+      //   delete attrKeys[sizeAttrIdx];
+      // }
+
+      // attrKeys.forEach((key) => {
+      //   if (key.match(/(xs|sm|md|lg)/)) {
+      //     completeClass += '_' + key;
+      //   } else {
+      //     completeClass += '-' + key;
+      //   }
+      // });
+    }
+
+    data.staticClass = data.staticClass ? `${completeClass} ${data.staticClass}` : `${completeClass}`
+
+    delete data.attrs
+
+    return h('div', data, children)
+  }
+}
+
 
 const Flex = {
   functional: true,
@@ -130,8 +194,10 @@ const Col = {
 
 let VueGridlex = {
 	install: function (Vue) {
+    console.log('install globaly');
 		Vue.component('l-flex', Flex);
 		Vue.component('l-col', Col);
+    Vue.component('l-grid', Grid);
 	}
 };
 

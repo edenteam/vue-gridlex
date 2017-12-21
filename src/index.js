@@ -1,16 +1,3 @@
-(function (global, factory) {
-	if (typeof exports === 'object' && typeof module !== 'undefined') {
-    module.exports = factory();
-    module.exports.default = module.exports;
-	} else if(typeof define === 'function' && define.amd) {
-    define(factory)
-  } else {
-    global.VueGridlex = factory()
-  }
-}(this, (function () { 'use strict';
-
-/*  */
-
 const SPECIAL_CHARS_REGEXP = /([:\-_]+(.))/g;
 const MOZ_HACK_REGEXP = /^moz([A-Z])/;
 /* istanbul ignore next */
@@ -192,15 +179,10 @@ const Col = {
   }
 }
 
-let VueGridlex = {
+module.exports =  {
 	install: function (Vue) {
-    console.log('install globaly');
 		Vue.component('l-flex', Flex);
 		Vue.component('l-col', Col);
     Vue.component('l-grid', Grid);
 	}
 };
-
-return VueGridlex;
-
-})));

@@ -36,7 +36,8 @@
   "devDependencies": {
     "babel-loader": "^7.1.2",
     "stylus": "^0.54.5",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "babel-preset-env": "^1.6.1"
   },
   "homepage": "https://github.com/edenteam/vue-gridlex#readme",
   "keywords": [
@@ -44,17 +45,21 @@
     "gridlex"
   ],
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "./dist/vue-gridlex.module.js",
   "name": "vue-gridlex",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/edenteam/vue-gridlex.git"
   },
   "scripts": {
+    "build:module": "babel ./src/index.js --out-file ./dist/vue-gridlex.module.js --source-maps --presets=env",
     "build": "webpack",
     "dev": "webpack --watch",
     "styl-build": "stylus ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
     "styl-dev": "stylus -w ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css"
   },
-  "version": "0.0.5"
+  "version": "0.0.5",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1"
+  }
 }

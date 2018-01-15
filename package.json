@@ -56,5 +56,5 @@
     "styl-build": "stylus ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
     "styl-dev": "stylus -w ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css"
   },
-  "version": "0.0.4"
+  "version": "0.0.5"
 }

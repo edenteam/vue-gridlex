@@ -1,7 +1,7 @@
 const path = require('path');
 
 const config = {
-  entry: './src/index.js',
+  entry: './src/browser.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'vue-gridlex.js'

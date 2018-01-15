@@ -10,7 +10,7 @@ const camelCase = function (name) {
 const Grid = {
   functional: true,
 
-  render: (h, props) => {
+  render: function (h, props) {
     const data = props.data;
     const children = props.children;
     let completeClass = 'l-grid';
@@ -71,7 +71,7 @@ const Grid = {
 const Flex = {
   functional: true,
 
-  render: (h, props) => {
+  render: function (h, props) {
     const data = props.data;
     const children = props.children;
     let completeClass = 'l-flex';
@@ -131,7 +131,7 @@ const Flex = {
 const Col = {
   functional: true,
 
-  render: (h, props) => {
+  render: function (h, props) {
     const data = props.data;
     const children = props.children;
     let completeClass = 'l-col';

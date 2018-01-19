@@ -58,7 +58,7 @@
     "styl-build": "stylus ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css",
     "styl-dev": "stylus -w ./src/styl/vue-gridlex.styl -o ./dist/vue-gridlex.css"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "dependencies": {
     "babel-preset-env": "^1.6.1"
   }
